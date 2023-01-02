@@ -83,7 +83,7 @@ const NavBar = () => {
           {toggleMenu && (
             <ul
               onClick={() => setToggleMenu(false)}
-              className="z-10 fixed top-10 -right-2 p-3 w-[80%] h-[90vh] shadow-black md:hidden list-none
+              className="z-10 fixed top-10 -right-2 p-3 w-[80%] h-[100vh] shadow-black md:hidden list-none
                         flex flex-col justify-start  rounded-md blue-glassmorphism  text-white animate-slide-in
                         
           "
