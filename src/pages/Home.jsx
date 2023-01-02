@@ -6,12 +6,7 @@ import { Link } from "react-router-dom";
 
 import Testimonials from "../Components/Testimonials";
 import { motion } from "framer-motion";
-import {
-  staggerContainer,
-  textVariant,
-  slideIn,
-  planetVariants,
-} from "../utils/motion";
+import { staggerContainer, textVariant, slideIn } from "../utils/motion";
 import { TitleText } from "../Components/CustomTexts";
 
 const Home = () => {
@@ -74,7 +69,7 @@ const Home = () => {
         />
 
         <div className="flex flex-col lg:flex-row items-center mt-10 justify-center  ">
-        <motion.div variants={slideIn("left", "tween", 0.3, 1)}>
+          <motion.div variants={slideIn("left", "tween", 0.3, 1)}>
             <img src={img1} alt="" className="w-[300px] mr-5  " />
           </motion.div>
           <div className=" flex flex-col text-center gap-4">
