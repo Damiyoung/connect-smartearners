@@ -14,7 +14,7 @@ import ForgotPassword from "./Authentication/ForgotPassword";
 
 function App() {
   return (
-    <div className=" bg-gray-300">
+    <div className=" bg-gray-100">
       <Router>
         {/* <Router>
         <Routes>

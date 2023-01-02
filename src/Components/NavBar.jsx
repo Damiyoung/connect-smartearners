@@ -6,6 +6,8 @@ import { Link, useLocation } from "react-router-dom";
 
 import { BsArrowRightCircle } from "react-icons/bs";
 import styles from "../styles/styles";
+import { motion } from 'framer-motion';
+import { navVariants } from '../utils/motion';
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -14,6 +16,12 @@ const NavBar = () => {
   const path = location.pathname;
 
   return (
+    <motion.nav
+    variants={navVariants}
+    initial="hidden"
+    whileInView="show"
+    className={`${styles.xPaddings} relative`}
+  >
     <div className=" overflow-hidden">
       <nav className={`${styles.navbar}`}>
         <img src={logo} alt="" className=" lg:ml-10 w-[20%] md:w-[10%]" />
@@ -51,18 +59,33 @@ const NavBar = () => {
             </Link>
           </ul>
           <div className=" flex justify-center items-center">
-            <p className=" hidden sm:inline text-[#FF9933] "> Smartconnect</p>
+            <p className=" text-2xl text-[#FF9933] "> Smartconnect</p>
+            <div className=" hidden  md:inline-flex">
+
             <Link to={"/signup"}>
               <div className="flex justify-center items-center  border border-[#FF9933] rounded-2xl  ml-7 sm:mr-5 p-2 gap-1">
-                <button
-                  className="
-           md:text-lg text-sm    "
+              <button
+              className="
+              md:text-lg text-sm    "
                 >
                   Register Now
                 </button>
                 <BsArrowRightCircle />
               </div>
             </Link>
+
+            <Link to={"/login"}>
+              <div className="flex justify-center items-center  border border-[#FF9933] rounded-2xl  ml-7 sm:mr-5 p-2 gap-1">
+                <button
+                className="
+                md:text-lg text-sm    "
+                >
+                Login
+                </button>
+                <BsArrowRightCircle />
+                </div>
+              </Link>
+              </div>
           </div>
         </div>
         <div className=" flex relative">
@@ -111,12 +134,15 @@ const NavBar = () => {
                 <Link to="/signup">
                   <p className={`${styles.btn} p-5`}>Register</p>
                 </Link>
+
+                
               </div>
             </ul>
           )}
         </div>
       </nav>
-    </div>
+      </div>
+      </motion.nav>
   );
 };
 
