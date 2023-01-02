@@ -74,12 +74,7 @@ const Home = () => {
         />
 
         <div className="flex flex-col lg:flex-row items-center mt-10 justify-center  ">
-          <motion.div
-            variants={planetVariants("left", "tween", 0.4, 1)}
-            initial="hidden"
-            whileInView="show"
-            className={` `}
-          >
+        <motion.div variants={slideIn("left", "tween", 0.3, 1)}>
             <img src={img1} alt="" className="w-[300px] mr-5  " />
           </motion.div>
           <div className=" flex flex-col text-center gap-4">
@@ -102,12 +97,7 @@ const Home = () => {
         />
 
         <div className="flex flex-col lg:flex-row items-center justify-center lg:mt-[200px]   ">
-          <motion.div
-            variants={planetVariants("right", "tween", 0.4, 1)}
-            initial="hidden"
-            whileInView="show"
-            className={` `}
-          >
+          <motion.div variants={slideIn("right", "tween", 0.5, 1)}>
             <img src={twitter} alt="" className=" lg:hidden w-[300px]   " />
           </motion.div>
           <div className=" flex flex-col text-center gap-4">
@@ -134,11 +124,7 @@ const Home = () => {
           textStyles=" font-bold text-4xl lg:hidden mt-6 text-center mb-3 "
         />
         <div className="flex flex-col lg:flex-row items-center justify-center lg:mt-[200px]   ">
-          <motion.div
-            variants={planetVariants("left", "tween", 0.4, 1)}
-            initial="hidden"
-            whileInView="show"
-          >
+          <motion.div variants={slideIn("right", "tween", 0.2, 1)}>
             <img src={instagram} alt="" className="w-[300px] mr-5  " />
           </motion.div>
           <div className=" flex flex-col text-center gap-4">
